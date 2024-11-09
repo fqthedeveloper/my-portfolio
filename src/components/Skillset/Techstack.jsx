@@ -4,19 +4,37 @@ import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiGit,
+  
 } from "react-icons/di";
 import {
-  SiGraphql,
-  SiSolidity,
-  SiRedux,
+  SiAmazons3,
+  SiPlesk,
   SiMongodb,
-  SiHtml5
+  SiHtml5,
+  SiAmazonaws,
+  SiLinux,
+  SiAmazonec2,
+  SiDjango,
+  SiCpanel,
+  SiPython,
+  SiGithub,
+  SiAwslambda,
+  SiAmazonroute53 
 } from "react-icons/si";
 
 const Techstack = () => {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+
+      <Col xs={4} md={2} className="tech-icons">
+      <SiAmazonaws />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAmazonec2 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiLinux />
+      </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiHtml5 />
       </Col>
@@ -30,22 +48,34 @@ const Techstack = () => {
         <DiReact />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiRedux />
+        <SiPlesk  />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiMongodb />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiGraphql />
+        <SiAmazons3 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSolidity />
+        <SiDjango />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiCpanel  />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <SiPython  />
       </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGithub  />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAwslambda  />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAmazonroute53  />
+      </Col>
+      
+     
     </Row>
   );
 }
