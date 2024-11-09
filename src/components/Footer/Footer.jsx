@@ -1,9 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiOutlineTwitter
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import logo from "../../assets/sLogo.png";
@@ -19,8 +16,7 @@ const Footer = () => {
           </Col>
           <Col md="4" className="footer-copywright">
             <span>Copyright © {year}</span>
-            {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}| 
-            <span>Faizan Qureshi</span>
+            <img src={logo} className="img-fluid logo" alt="brand" />| 
           </Col>
           <Col md="4" className="footer-body">
             <ul className="footer-icons">
