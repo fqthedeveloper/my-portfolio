@@ -8,8 +8,7 @@ const Type = () => {
             strings: [
               "Full Stack Developer",
               "Passionate Linux System Administrator & Engineer",
-              "AWS Certified Solution Architect Associate",
-              
+              "AWS Certified Solution Architect Associate",              
             ],
             autoStart: true,
             loop: true,

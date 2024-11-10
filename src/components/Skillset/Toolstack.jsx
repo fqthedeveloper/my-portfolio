@@ -4,8 +4,8 @@ import {
   SiVisualstudiocode,
   SiPostman,
   SiHeroku,
-  SiVercel,
-  SiNetlify
+  SiNetlify,
+  SiJenkins,
 } from "react-icons/si";
 
 const Toolstack = () => {
@@ -18,13 +18,14 @@ const Toolstack = () => {
         <SiPostman />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <SiNetlify />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiHeroku />
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiJenkins  />
       </Col>
     </Row>
   );

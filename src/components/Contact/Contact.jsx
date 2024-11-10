@@ -22,9 +22,7 @@ const Contact = () => {
     if(!formData.from_name || !formData.reply_to ||!formData.message){
       setNotDone(true)
     } else {
-      
-      //  Please use your own credentials from emailjs or i will recive your email
-      
+          
     emailjs
       .sendForm(
         "service_qnc2svn",

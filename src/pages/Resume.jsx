@@ -9,8 +9,10 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
 // Use the raw link to the PDF
-const resumeLink = `https://raw.githubusercontent.com/fqthedeveloper/my-portfolio/9f07f85adedc499e82a3a3c343f6d205c314b8a6/FQResume.pdf`;
+const resumeLink = `https://github.com/fqthedeveloper/my-portfolio/blob/e73bd9e54518ee9818fc0b9f5e88d7e20070b791/src/assets/FQResume.pdf`;
 
 const Resume = () => {
   const [width, setWidth] = useState(1200);
@@ -21,10 +23,6 @@ const Resume = () => {
 
   useEffect(() => {
     document.title = 'Resume';
-  }, []);
-
-  useEffect(() => {
-    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.js`;
   }, []);
 
   return (

@@ -19,7 +19,12 @@ import {
   SiPython,
   SiGithub,
   SiAwslambda,
-  SiAmazonroute53 
+  SiAmazonroute53,
+  SiRedhat,
+  SiAnsible ,
+  SiMysql ,
+  SiAmazonrds
+
 } from "react-icons/si";
 
 const Techstack = () => {
@@ -27,13 +32,31 @@ const Techstack = () => {
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
 
       <Col xs={4} md={2} className="tech-icons">
+        <SiLinux />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiRedhat   />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
       <SiAmazonaws />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiAmazonec2 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiLinux />
+        <SiAmazons3 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAwslambda  />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAmazonroute53  />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAmazonrds />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAnsible />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiHtml5 />
@@ -54,9 +77,6 @@ const Techstack = () => {
         <SiMongodb />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiAmazons3 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <SiDjango />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -69,13 +89,9 @@ const Techstack = () => {
         <SiGithub  />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiAwslambda  />
+        <SiMysql />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAmazonroute53  />
-      </Col>
-      
-     
+
     </Row>
   );
 }

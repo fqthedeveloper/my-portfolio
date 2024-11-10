@@ -7,6 +7,8 @@ import POA from '../../assets/badges/plesk-obsidian-associate.png'
 import AWSEIC from '../../assets/badges/aws-educate-introduction-to-cloud-101.png'
 import CPP from '../../assets/badges/cpp_badge.svg'
 import AWSKC from '../../assets/badges/aws-knowledge-compute.png'
+import AWSESC from '../../assets/badges/aws-educate-getting-started-with-compute.png'
+import AWSESS from '../../assets/badges/aws-educate-getting-started-with-storage.png'
 
 const Badges = () => {
   return (
@@ -32,6 +34,14 @@ const Badges = () => {
 
       <Col xs={4} md={2} className="tech-icons">
         <img src={AWSKC} alt="AWSKC Badge" width='100px' height='100px' title="AWS Knowledge Compute"/>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={AWSESC} alt="AWSESC Badge" width='100px' height='100px' title="AWS Educate Getting Started with Compute"/>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={AWSESS} alt="AWSESS Badge" width='100px' height='100px' title="AWS Educate Getting Started with Storage"/>
       </Col>
       
     </Row>
