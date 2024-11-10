@@ -12,7 +12,7 @@ import "react-pdf/dist/esm/Page/TextLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 // Use the raw link to the PDF
-const resumeLink = `https://github.com/fqthedeveloper/my-portfolio/blob/e73bd9e54518ee9818fc0b9f5e88d7e20070b791/src/assets/FQResume.pdf`;
+const resumeLink = `https://raw.githubusercontent.com/fqthedeveloper/my-Resume-PDF/b18936f153492f3e87003980ba0a46eafc602301/FQResume.pdf`;
 
 const Resume = () => {
   const [width, setWidth] = useState(1200);
