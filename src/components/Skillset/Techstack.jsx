@@ -23,7 +23,8 @@ import {
   SiRedhat,
   SiAnsible ,
   SiMysql ,
-  SiAmazonrds
+  SiAmazonrds,
+  SiLinuxfoundation 
 
 } from "react-icons/si";
 
@@ -36,6 +37,9 @@ const Techstack = () => {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiRedhat   />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+      <SiLinuxfoundation />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
       <SiAmazonaws />
