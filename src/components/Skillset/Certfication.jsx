@@ -4,7 +4,8 @@ import AWSSAA from '../../assets/certfications/AWS Solution.png';
 import SIWD from '../../assets/certfications/Skill India.png';
 import CPENEL from '../../assets/certfications/Cpenel.png';
 import DEll from '../../assets/certfications/DELL_Certificate_page-0001.jpg';
-import LINUXF from '../../assets/certfications/Linux Foundation.png';
+import LINUX158 from '../../assets/certfications/Linux Foundation 158.png';
+import LINUX151 from '../../assets/certfications/Linux Foundation 151.png';
 import POAC from '../../assets/certfications/certification-Plesk-Obsidian-Associate-Certification-fqthedeveloper_page-0001.jpg';
 import NSDCCIO from '../../assets/certfications/Faizan Qureshi_5E4LWVWR-1_page-0001.jpg';
 import NSDWE from '../../assets/certfications/Faizan Qureshi_WHJCUSKV-1_page-0001.jpg';
@@ -27,7 +28,6 @@ function Certfication() {
     { src: SIWD, alt: "Skill India Web Development" },
     { src: DEll, alt: "DELL Web Development Certificate" },
     { src: AWSSAA, alt: "AWS Certified Solutions Architect" },
-    { src: LINUXF, alt: "Linux Foundation Certification" },
     { src: CPENEL, alt: "cPanel Professional Certification" },
     { src: POAC, alt: "Plesk Obsidian Associate" },
     { src: NSDAC, alt: "NSD AC" },
@@ -36,6 +36,8 @@ function Certfication() {
     { src: AWSCE, alt: "AWS Essential Cloud" },
     { src: AESDEVOPS, alt: "AWS Getting Started with DEVOPS" },
     { src: AZUREC, alt: "Azure Describe Cloud Computing" },
+    { src: LINUX158, alt: "Linux Foundation 158 Certification" },
+    { src: LINUX151, alt: "Linux Foundation 151 Certification" },
   ];
 
   return (

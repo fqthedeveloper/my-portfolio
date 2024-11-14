@@ -10,7 +10,6 @@ import { FaInstagram } from "react-icons/fa";
 const About = () => {
     return (
         <Container fluid className="home-about-section" id="about">
-          <Container>
             <Row>
               <Col md={8} className="home-about-description">
                 <h1 style={{ fontSize: "2.6em" }}>
@@ -109,7 +108,6 @@ const About = () => {
               </Col>
             </Row>
           </Container>
-        </Container>
       );
     
 }

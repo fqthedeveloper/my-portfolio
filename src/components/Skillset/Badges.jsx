@@ -10,6 +10,7 @@ import AWSKC from '../../assets/badges/aws-knowledge-compute.png';
 import AWSESC from '../../assets/badges/aws-educate-getting-started-with-compute.png';
 import AWSESS from '../../assets/badges/aws-educate-getting-started-with-storage.png';
 import LFK from '../../assets/badges/lfs158-introduction-to-kubernetes.png';
+import LFCIT from '../../assets/badges/lfs151-introduction-to-cloud-infrastructure-technol.png';
 
 const Badges = () => {
   const [show, setShow] = useState(false);
@@ -23,7 +24,6 @@ const Badges = () => {
 
   const badges = [
     { src: AWSCSAA, alt: "AWS CSAA Badge", title: "AWS Certified Solutions Architect – Associate" },
-    { src: LFK, alt: "LFK Badge", title: "Linux Foundation Intduction on Kubernative" },
     { src: CPP, alt: "CPP Badge", title: "cPanel Professional Certification" },
     { src: POA, alt: "POA Badge", title: "Plesk-Obsidian-Associate" },
     { src: AWSKA, alt: "AWSKA Badge", title: "AWS Knowledge Architecting" },
@@ -32,6 +32,8 @@ const Badges = () => {
     { src: AWSKC, alt: "AWSKC Badge", title: "AWS Knowledge Compute" },
     { src: AWSESC, alt: "AWSESC Badge", title: "AWS Educate Getting Started with Compute" },
     { src: AWSESS, alt: "AWSESS Badge", title: "AWS Educate Getting Started with Storage" },
+    { src: LFK, alt: "LFK Badge", title: "Linux Foundation Intduction on Kubernative" },
+    { src: LFCIT, alt: "LFCIT Badge", title: "Linux Foundation Intduction Cloud Infrastructure Technol" },
   ];
 
   return (

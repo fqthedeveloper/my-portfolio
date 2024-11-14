@@ -23,7 +23,7 @@ const Skillset = () => {
         <Techstack />
 
         <h1 className="project-heading">
-          I have <strong className="yellow">Earned Badges</strong>
+          I have <strong className="yellow">Earned Badges</strong> <small style={{textAlign: 'right'}}><a href="https://www.credly.com/users/thequreshi">Verify</a></small>
         </h1>
         <Badges />
 
