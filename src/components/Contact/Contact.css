@@ -1,3 +1,8 @@
+.contact-content{
+    color: rgb(0, 0, 0);
+}
+
+
 .contact-form{
     padding: 0 3rem 0 3rem;
     display: flex;
@@ -10,7 +15,7 @@
 .c-left{
     text-align: center !important;
     padding-top: 25px;
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 .c-right{
@@ -37,7 +42,7 @@
     border: 2px solid #40008a;
     border-radius: 8px;
     font-size: 19px;
-    color: white   
+    color: rgb(0, 0, 0)   
 }
 
 .c-right .user:hover{
@@ -77,4 +82,8 @@ textarea{
         width: 16rem;
     }
 
+}
+
+.contact-text {
+    color: rgb(0, 0, 0)   
 }

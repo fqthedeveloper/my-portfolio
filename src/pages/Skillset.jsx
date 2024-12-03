@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Container, Badge  } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import Particle from "../components/Particle";
 import Techstack from "../components/Skillset/Techstack";
@@ -7,6 +7,7 @@ import Toolstack from "../components/Skillset/Toolstack";
 import Certfication from "../components/Skillset/Certfication";
 import Github from "../components/Skillset/Github";
 import Badges from "../components/Skillset/Badges";
+
 const Skillset = () => {
   useEffect(() => {
     document.title = "Skillset";
@@ -23,12 +24,7 @@ const Skillset = () => {
         <Techstack />
 
         <h1 className="project-heading">
-          I have <strong className="yellow">Earned Badges</strong>{" "}
-
-           <a href="https://www.credly.com/users/thequreshi"><Badge bg="dark">
-              Verify
-          </Badge>
-          </a>
+          I have <strong className="yellow">Earned Badges</strong>
         </h1>
         <Badges />
 

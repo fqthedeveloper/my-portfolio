@@ -44,10 +44,10 @@ const Contact = () => {
     
 
     return(
-        <Container style={{paddingTop: '50px'}} >
-            <Row >
+        <Container style={{paddingTop: '50px'}}  className='contact-content'>
+            <Row> 
             <Col md={6} className="c-left" >
-            <h1 >Get in Touch</h1>
+            <h1>Get in Touch</h1>
             <h1 className="yellow">Contact me</h1>
             </Col>
             <Col md={6} className="c-right">

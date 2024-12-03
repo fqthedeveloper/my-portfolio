@@ -30,7 +30,7 @@ const Projects = () => {
             <ProjectCard
               imgPath={Sixth}
               isBlog={false}
-              title="Lift-Buddy"
+              title="Blogging Website"
               description="This A Fullstack Website in Django (Python) & React JS (javascripth) For Blog"
               ghLink="https://github.com/fqthedeveloper/Adil-Iqbal-Blog-Frontend"
               demoLink="https://testing.thequreshi.site"
