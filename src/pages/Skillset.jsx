@@ -24,12 +24,12 @@ const Skillset = () => {
         <Techstack />
 
         <h1 className="project-heading">
-          I have <strong className="yellow">Earned Badges</strong>
+         <strong className="yellow">Earned Badges</strong>
         </h1>
         <Badges />
 
         <h1 className="project-heading">
-          I have <strong className="yellow">Earned Certfication</strong>
+         <strong className="yellow">Earned Certfication</strong>
         </h1>
         <Certfication />
 
