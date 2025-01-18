@@ -1,20 +1,13 @@
-import React, { useState } from "react";
-import { Col, Row, Modal, Image } from "react-bootstrap";
-import AWSCSAA from '../../assets/badges/aws-csaa.png';
-import AWSKA from '../../assets/badges/aws-knowledge-architecting.png';
-import AWSKCE from '../../assets/badges/aws-knowledge-cloud-essentials (1).png';
-import POA from '../../assets/badges/plesk-obsidian-associate.png';
-import AWSEIC from '../../assets/badges/aws-educate-introduction-to-cloud-101.png';
-import CPP from '../../assets/badges/cpp_badge.svg';
-import AWSKC from '../../assets/badges/aws-knowledge-compute.png';
-import AWSESC from '../../assets/badges/aws-educate-getting-started-with-compute.png';
-import AWSESS from '../../assets/badges/aws-educate-getting-started-with-storage.png';
-import LFK from '../../assets/badges/lfs158-introduction-to-kubernetes.png';
-import LFCIT from '../../assets/badges/lfs151-introduction-to-cloud-infrastructure-technol.png';
+import React, { useState, useEffect } from "react";
+import { Col, Row, Modal, Image, Spinner, Alert } from "react-bootstrap";
+import axios from 'axios';
 
 const Badges = () => {
   const [show, setShow] = useState(false);
   const [currentImage, setCurrentImage] = useState('');
+  const [badges, setBadges] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const handleClose = () => setShow(false);
   const handleShow = (image) => {
@@ -22,19 +15,28 @@ const Badges = () => {
     setShow(true);
   };
 
-  const badges = [
-    { src: AWSCSAA, alt: "AWS CSAA Badge", title: "AWS Certified Solutions Architect – Associate" },
-    { src: CPP, alt: "CPP Badge", title: "cPanel Professional Certification" },
-    { src: POA, alt: "POA Badge", title: "Plesk-Obsidian-Associate" },
-    { src: AWSKA, alt: "AWSKA Badge", title: "AWS Knowledge Architecting" },
-    { src: AWSKCE, alt: "AWSKCE Badge", title: "AWS Knowledge Cloud Essentials" },
-    { src: AWSEIC, alt: "AWSEIC Badge", title: "AWS Educate Introduction Cloud" },
-    { src: AWSKC, alt: "AWSKC Badge", title: "AWS Knowledge Compute" },
-    { src: AWSESC, alt: "AWSESC Badge", title: "AWS Educate Getting Started with Compute" },
-    { src: AWSESS, alt: "AWSESS Badge", title: "AWS Educate Getting Started with Storage" },
-    { src: LFK, alt: "LFK Badge", title: "Linux Foundation Intduction on Kubernative" },
-    { src: LFCIT, alt: "LFCIT Badge", title: "Linux Foundation Intduction Cloud Infrastructure Technol" },
-  ];
+  useEffect(() => {
+    const fetchBadges = async () => {
+      try {
+        const response = await axios.get('badges/');
+        setBadges(response.data);
+      } catch (err) {
+        setError('Failed to fetch badges');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBadges();
+  }, []);
+
+  if (loading) {
+    return <Spinner animation="border" />;
+  }
+
+  if (error) {
+    return <Alert variant="danger">{error}</Alert>;
+  }
 
   return (
     <>
@@ -42,11 +44,11 @@ const Badges = () => {
         {badges.map((badge, index) => (
           <Col xs={4} md={2} className="tech-icons" key={index}>
             <img
-              src={badge.src}
-              alt={badge.alt}
+              src={badge.badges}
+              alt={badge.title}
               height='100px'
               title={badge.title}
-              onClick={() => handleShow(badge.src)}
+              onClick={() => handleShow(badge.badges)}
               style={{ cursor: "pointer" }}
             />
           </Col>

@@ -1,19 +1,38 @@
-import React,{useEffect} from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Container, Row, Col, Spinner, Alert } from "react-bootstrap";
 import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
-import Sixth from "../assets/projects/Sixth.png";
-import Fifth from "../assets/projects/Fifth.png";
-import Forth from "../assets/projects/Forth.png";
-import Thard from "../assets/projects/Thard.png";
-import Second from "../assets/projects/Second.png";
-import First from "../assets/projects/First.png";
+import axios from 'axios';
 
 const Projects = () => {
+  const [getprojects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     document.title = 'Project';
-  });
+
+    const fetchProjects = async () => {
+      try {
+        const response = await axios.get('projects/'); // Adjust the URL to your API endpoint
+        setProjects(response.data);
+      } catch (err) {
+        setError('Failed to fetch projects');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  if (loading) {
+    return <Spinner animation="border" />;
+  }
+
+  if (error) {
+    return <Alert variant="danger">{error}</Alert>;
+  }
 
   return (
     <Container fluid className="project-section">
@@ -26,75 +45,22 @@ const Projects = () => {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Sixth}
-              isBlog={false}
-              title="Blogging Website"
-              description="This A Fullstack Website in Django (Python) & React JS (javascripth) For Blog"
-              ghLink="https://github.com/fqthedeveloper/Adil-Iqbal-Blog-Frontend"
-              demoLink="https://testing.thequreshi.site"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Fifth}
-              isBlog={false}
-              title="IRT Static Website"
-              description="This is A Static Website"
-              ghLink="https://github.com/fqthedeveloper/irt-static-website"
-              demoLink="https://irttechnalogies.netlify.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Forth}
-              isBlog={false}
-              title="Email Sender Website"
-              description="This Django Email Sender Using Gmail & Link Urls"
-              ghLink="https://github.com/fqthedeveloper/emailsender"
-              demoLink="https://demoserver.pythonanywhere.com"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Thard}
-              isBlog={false}
-              title="SK.Managment Website"
-              description="This Website Are Created in ReactJS & Django for Contact US in Background"
-              ghLink="https://github.com/fqthedeveloper/SKManagment"
-              demoLink="https://skmanagment.netlify.app"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Second}
-              isBlog={false}
-              title="Camera Selling"
-              description="This A FullStack Website Django And React"
-              ghLink="https://github.com/fqthedeveloper/FullStackDjangoReact"
-              demoLink="https://eagleeye92.netlify.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={First}
-              isBlog={false}
-              title="NFCMMA Django"
-              description="This My First Django Website"
-              ghLink="https://github.com/fqthedeveloper/NFCMMAClub-Live"
-              demoLink="https://fqthedeveloper.pythonanywhere.com/"
-            />
-          </Col>
+          {getprojects.map((projects, index) => (
+            <Col md={4} className="project-card" key={index}>
+              <ProjectCard
+                imgPath={projects.project}
+                isBlog={false}
+                title={projects.title}
+                description={projects.description}
+                ghLink={projects.ghLink}
+                demoLink={projects.demoLink}
+              />
+            </Col>
+          ))}
         </Row>
       </Container>
     </Container>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
