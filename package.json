@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/core": "^7.0.0",
     "@emailjs/browser": "^3.10.0",
     "@react-pdf/renderer": "^4.0.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -49,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@capacitor/cli": "^7.0.0",
     "pdfjs-dist": "^4.8.69"
   }
 }
