@@ -1,4 +1,6 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
     namespace "io.ionic.portfolio"
@@ -19,8 +21,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11 // Set to a valid Java version
-        targetCompatibility JavaVersion.VERSION_11 // Set to a valid Java version
+        sourceCompatibility JavaVersion.VERSION_14 // Set to Java 14
+        targetCompatibility JavaVersion.VERSION_14 // Set to Java 14
     }
 
     buildTypes {
@@ -55,9 +57,9 @@ apply from: 'capacitor.build.gradle'
 // Google Services plugin application
 try {
     def servicesJSON = file('google-services.json')
-    if (servicesJSON.exists() && servicesJSON.text) {
+    if (servicesJSON.exists()) {
         apply plugin: 'com.google.gms.google-services'
     }
-} catch(Exception e) {
-    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+} catch (Exception e) {
+    // Handle exception if needed
 }
