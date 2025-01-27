@@ -1,65 +1,23 @@
-plugins {
-    id 'com.android.application'
-}
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-android {
-    namespace "io.ionic.portfolio"
-    compileSdk rootProject.ext.compileSdkVersion
-
-    defaultConfig {
-        applicationId "io.ionic.portfolio"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        aaptOptions {
-            // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
-            ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
-        }
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
     }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_14 // Set to Java 14
-        targetCompatibility JavaVersion.VERSION_14 // Set to Java 14
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.7.2' // Ensure this is present
+        classpath 'com.google.gms:google-services:4.4.2'
     }
 }
 
-repositories {
-    flatDir {
-        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
     }
 }
 
-dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
-    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
-    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
-    implementation project(':capacitor-android')
-    testImplementation "junit:junit:$junitVersion"
-    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
-    implementation project(':capacitor-cordova-android-plugins')
-}
-
-// Apply Capacitor build configuration
-apply from: 'capacitor.build.gradle'
-
-// Google Services plugin application
-try {
-    def servicesJSON = file('google-services.json')
-    if (servicesJSON.exists()) {
-        apply plugin: 'com.google.gms.google-services'
-    }
-} catch (Exception e) {
-    // Handle exception if needed
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
