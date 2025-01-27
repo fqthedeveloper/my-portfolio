@@ -3,13 +3,12 @@ plugins {
 }
 
 android {
-    namespace "io.ionic.portfolio"
-    compileSdk rootProject.ext.compileSdkVersion
+    compileSdkVersion 33 // Set to the appropriate SDK version
 
     defaultConfig {
         applicationId "io.ionic.portfolio"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 21 // Set to your minimum SDK version
+        targetSdkVersion 33 // Set to your target SDK version
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
