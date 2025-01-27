@@ -2,6 +2,16 @@ plugins {
     id 'com.android.application'
 }
 
+ext {
+    // Define version properties for dependencies
+    androidxAppCompatVersion = '1.3.1' // Replace with the appropriate version
+    androidxCoordinatorLayoutVersion = '1.1.0' // Example for CoordinatorLayout
+    coreSplashScreenVersion = '1.0.0' // Example for Core Splash Screen
+    junitVersion = '4.13.2' // Example for JUnit
+    androidxJunitVersion = '1.1.3' // Example for AndroidX JUnit
+    androidxEspressoCoreVersion = '3.4.0' // Example for Espresso
+}
+
 android {
     compileSdkVersion 33 // Set to the appropriate SDK version
 
