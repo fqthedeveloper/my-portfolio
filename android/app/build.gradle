@@ -13,12 +13,12 @@ ext {
 }
 
 android {
-    compileSdkVersion 34 // Update this to at least 34
+    compileSdkVersion 35 // Update this to at least 35
 
     defaultConfig {
         applicationId "io.ionic.portfolio"
         minSdkVersion 23 // Ensure this is at least 23
-        targetSdkVersion 34 // Update this to match the compileSdkVersion
+        targetSdkVersion 35 // Update this to match the compileSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
