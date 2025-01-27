@@ -33,8 +33,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17 // Update to Java 17
-        targetCompatibility JavaVersion.VERSION_17 // Update to Java 17
+        sourceCompatibility JavaVersion.VERSION_17 // Set to Java 17
+        targetCompatibility JavaVersion.VERSION_17 // Set to Java 17
     }
 
     buildTypes {
@@ -46,9 +46,6 @@ android {
 }
 
 repositories {
-    google() // Add Google repository
-    mavenCentral() // Add Maven Central repository
-    // Consider removing flatDir if possible
     flatDir {
         dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
     }
