@@ -17,14 +17,14 @@ android {
 
     defaultConfig {
         applicationId "io.ionic.portfolio"
-        minSdkVersion 21 // Set to your minimum SDK version
+        minSdkVersion 23 // Change this to at least 23
         targetSdkVersion 33 // Set to your target SDK version
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         // Specify the namespace
-        namespace "io.ionic.portfolio" // Add this line
+        namespace "io.ionic.portfolio" // Ensure this is included
 
         aaptOptions {
             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
