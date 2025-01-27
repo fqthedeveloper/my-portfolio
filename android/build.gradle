@@ -54,7 +54,7 @@ apply from: 'capacitor.build.gradle'
 
 // Google Services plugin application
 try {
-    def servicesJSON = file('google-services .json')
+    def servicesJSON = file('google-services.json')
     if (servicesJSON.exists()) {
         apply plugin: 'com.google.gms.google-services'
     }
