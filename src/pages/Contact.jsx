@@ -10,7 +10,7 @@ const Contact = () => {
   });
   
   return (
-    <Container style={{padding: '60px'}}>
+    <Container className="contact-section" style={{padding: '60px'}}>
       <Particle />
       <ContactForm />
       <Social />
