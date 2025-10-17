@@ -29,7 +29,7 @@ const Social = () => {
                   </li>
                   <li className="contact-icons">
                     <a
-                      href="www.linkedin.com/in/faizan-qureshi-developer"
+                      href="https://www.linkedin.com/in/faizan-qureshi-developer"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-color  contact-social-icons"
