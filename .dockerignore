@@ -1,0 +1,10 @@
+node_modules
+.git
+build
+.DS_Store
+*.log
+*.pem
+*.env
+docker-compose.yml
+Dockerfile
+jenkinsfile
